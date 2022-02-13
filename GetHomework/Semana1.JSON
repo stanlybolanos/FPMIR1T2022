@@ -1,0 +1,34 @@
+{
+      "FechaDeEntrega": "03/02/2022",
+      "Python": {
+            "Instrucciones": "Dirijase al sitio https://www.w3schools.com/python/exercise.asp y complete",
+            "Ejercicios": {
+                  "1": "Python Tuples",
+                  "2": "Python Sets",
+                  "3": "Python Dictionaries"
+            }
+      },
+      "Git": {
+            "Instrucciones": "Dirijase al sitio de  https://learngitbranching.js.org/ y complete",
+            "Ejercicios": {
+                  "1": "Modulo de Moving work around",
+                  "2": "Modulo de A Mixed bag"
+            }
+      },
+      "Instalaciones": {
+            "Instrucciones": "Instale el siguiente listado de software en su computadora",
+            "Software": {
+                  "1": "VS Code desktop - https://code.visualstudio.com/download",
+                  "2": "Git - https://git-scm.com/downloads",
+                  "3": "Python - https://www.youtube.com/watch?v=i-MuSAwgwCU"
+            }
+      },
+      "Videos/Tutoriales": {
+            "Instrucciones": "Apoyese de los siguientes videos y tutoriales para  las instalaciones",
+            "Videos": {
+                  "1": "Instalando Python - https://www.youtube.com/watch?v=i-MuSAwgwCU",
+                  "2": "Instalando VS Code - https://www.youtube.com/watch?v=MlIzFUI1QGA",
+                  "3": "Instalando extension de Python - https://www.youtube.com/watch?v=vBrrOa_SJog"
+            }
+      }
+}
