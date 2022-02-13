@@ -15,5 +15,5 @@ def GetHomework(SemanaN,FilePath):
     archivo.close()
 
 InputSemana = input("Ingrese semana:")
-InputFile = input("Ingrese path y nombre de archivo:")
+InputFile = input("Ingrese\ path y nombre de archivo:")
 GetHomework(InputSemana,InputFile)
