@@ -1,6 +1,7 @@
 import webbrowser
 import requests
 import json
+from SubirArchivosGitHub import SubirGitHub
 
 #Esta funcion devuelve la tarea de la semana al recibir el numero de semana como parametro
 def GetHomework(SemanaN,FilePath):
@@ -16,11 +17,17 @@ def GetHomework(SemanaN,FilePath):
 
 InputSemana = input("Ingrese semana:")
 InputFile = input("Ingrese\ path y nombre de archivo:")
+
+Mensaje = input("Ingrese mensaje para commit:")
+TokenGithub = input("Ingrese token para autentificarse:")
+Repo = input("Ingrese nombre de repo en Github:")
+
 GetHomework(InputSemana,InputFile)
 
 #Tarea para 17/02/2022
-from SubirArchivosGitHub import *
-
 #Llamar a la función contenida en script SubirArchivosGitHub.py
-SubirGitHub()
+SubirGitHub(MensajeCommit=Mensaje,Token=TokenGithub,Archivo=InputFile,NombreRepo=Repo)
+
+
+
 
