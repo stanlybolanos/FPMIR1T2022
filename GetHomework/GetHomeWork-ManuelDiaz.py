@@ -50,5 +50,5 @@ if (os.path.isdir(os.path.dirname(InputFile)) == 0):
 #Llamada a la función GetHomeWork creada arriba
 GetHomeWork(InputSemana,InputFile)
 
-#Llamada a la función creada en el archivo SubirArchivosGitHub.py
+#Llama a la función creada en el archivo SubirArchivosGitHub.py
 SubirGitHub(MensajeCommit,TokenGitHub,InputFile,NombreRepo)
