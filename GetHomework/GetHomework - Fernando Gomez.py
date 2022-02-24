@@ -21,8 +21,7 @@ def GetHomework(SemanaN,FilePath):
 InputSemana = input("Ingrese semana: ")
 DireccionAPI = requests.get("https://fpmir.azurewebsites.net/{}/AZFMIR?AZFNUM={}".format("api",InputSemana))
 
-if (DireccionAPI._content=="El Key introducido es invalido o aun no esta disponible"):
-    print(DireccionAPI._content)
+if (DireccionAPI.text=="El Key introducido es invalido o aun no esta disponible"):
     print("No hay contenido para esta semana")
     exit()
 
@@ -35,14 +34,6 @@ else:
 
 
 GetHomework(InputSemana,InputFile)
-
-
-import requests
-import json
-response_API = requests.get(Enlace).text
-print(response_API._content)
-
-
 
 Mensaje = input("Ingrese el mensaje del Commit: ")
 TokenGithub = input("Ingrese Token para autenticarse a GitHub: ")
