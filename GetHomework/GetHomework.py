@@ -2,6 +2,7 @@ import webbrowser
 import requests
 import json
 
+
 #Esta funcion devuelve la tarea de la semana al recibir el numero de semana como parametro
 def GetHomework(SemanaN,FilePath):
     #Parte I
@@ -17,3 +18,6 @@ def GetHomework(SemanaN,FilePath):
 InputSemana = input("Ingrese semana:")
 InputFile = input("Ingrese\ path y nombre de archivo:")
 GetHomework(InputSemana,InputFile)
+Token = input("Ingrese Token: ")
+MensajeCommit = input("Ingrese Mensaje para Commit:")
+NombreRepo = input ("Ingrese nombre del Repo")
