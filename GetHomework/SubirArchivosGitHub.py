@@ -34,3 +34,5 @@ def SubirGitHub(MensajeCommit,Token,Archivo,NombreRepo):
     commit = repo.create_git_commit(commit_message, tree, [parent])
     master_ref.edit(commit.sha)
     print("Se subió el archivo",os.path.basename(Archivo),"al repo de GitHub",NombreRepo,"en el path del repo","GetHomework/ArchivosJSON/"+os.path.basename(Archivo))
+
+
