@@ -15,6 +15,7 @@ def GetHomework(SemanaN,FilePath):
     response=requests.get(Enlace).text
     response_info=json.loads(response)
     archivo=open(FilePath, "w")
+    #Parte IV
     try:
         json.dump(response_info,archivo,indent=6)
     except:
@@ -25,6 +26,7 @@ def GetHomework(SemanaN,FilePath):
         archivo.close()
 
 InputSemana = input("Ingrese semana: ")
+#Parte IV
 #Verificación del API para el contenido de la semana.
 DireccionAPI = requests.get("https://fpmir.azurewebsites.net/{}/AZFMIR?AZFNUM={}".format("api",InputSemana))
 if (DireccionAPI.text=="El Key introducido es invalido o aun no esta disponible"):
@@ -33,12 +35,12 @@ if (DireccionAPI.text=="El Key introducido es invalido o aun no esta disponible"
 
 
 InputFile = input("Ingrese\ path y nombre de archivo: ")
+#Parte IV
 #Verificación de la extensión .json.
 root, extension = os.path.splitext(InputFile)
 if (extension!='.json'):
     print("La extensión JSON es invalida.")
     exit()
-
 
 #Verificación del Filepath
 if os.path.exists(InputFile):
