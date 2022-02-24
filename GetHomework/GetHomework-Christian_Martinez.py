@@ -46,7 +46,7 @@ if Comprobacion==False:
 else:
     GetHomework(InSemana,FileCreado)
 
-"""""
+
 #Tarea de Semana3
 from SubirArchivosGitHub import SubirGitHub
 
@@ -54,5 +54,4 @@ MensajeCommit=input("Ingrese el mensaje que desea para su commit")
 TokenGitHub=input("Ingrese el token que obtuvo")
 NombreRepo=input("Ingrese el nombre del respositorio que desea el commit")
 
-SubirGitHub(MensajeCommit, TokenGitHub, InFile, NombreRepo)
-"""""
+SubirGitHub(MensajeCommit, TokenGitHub, FileCreado, NombreRepo)
