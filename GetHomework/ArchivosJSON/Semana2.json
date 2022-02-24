@@ -1,0 +1,17 @@
+{
+      "FechaDeEntrega": "10/02/2022",
+      "Python": {
+            "Instrucciones": "Dirijase a las ultimas diapositivas de las presentaciones para las instrucciones de GetHomework"
+      },
+      "Detalles": {
+            "Input": "El script debe de pedir el numero de semana por medio de un Input",
+            "Parametros": {
+                  "1": "Recibira coomo parametro el texto de SemanaN donde N sera el numero de semana",
+                  "2": "Para la Parte II - Tambien recibira el parametro FilePath que sera el directorio donde se guardara el archivo"
+            },
+            "Resultados": {
+                  "1": "Para la Parte I - Usara la libreria de webbrowser para abrir el API en su navegador",
+                  "2": "Para la Parte II - Usara las librerias de json y requests para almacenar el resultado del API en el parametro Filepath"
+            }
+      }
+}
