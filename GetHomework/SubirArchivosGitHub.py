@@ -13,7 +13,7 @@ def SubirGitHub(MensajeCommit,Token,Archivo,NombreRepo):
         Archivo
     ]
     file_names = [
-        os.path.basename(Archivo)
+        os.path.basename(Archivo) # devuelve el nobre del archivo de una direccion ej. C:/tem/nom.txt
     ]
     commit_message = MensajeCommit
     master_ref = repo.get_git_ref('heads/main')
