@@ -1,5 +1,5 @@
 def Sumatoria(ElNum):
-    if ElNum==1:
+    if ElNum<=1:
         return 1
     else:
         return ElNum+Sumatoria(ElNum-1)
