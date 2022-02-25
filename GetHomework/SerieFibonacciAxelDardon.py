@@ -1,4 +1,4 @@
-Num1=int(input("Ingrese Numero Num1:"))
+Num1=int(input("Ingrese Ultimo Numero a generar:"))
 anterior=0
 actual=1
 i=actual
