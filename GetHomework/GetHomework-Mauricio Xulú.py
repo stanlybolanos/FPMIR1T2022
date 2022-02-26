@@ -1,7 +1,3 @@
-from cgitb import text
-from csv import QUOTE_NONNUMERIC
-from decimal import ExtendedContext
-from urllib import response
 import webbrowser
 import requests
 import json
