@@ -12,31 +12,43 @@ def GetHomework(SemanaN,FilePath):
     webbrowser.open(Enalce, new=2)
     #Parte II
     response=requests.get(Enalce).text
-    archivo=open(FilePath, "w")
+   
     if(response.capitalize()=="El key introducido es invalido o aun no esta disponible"):
         print("La semana elegida:",SemanaN,"aun no se encuentra, intente otra semana")
-        exit()
+        return False
     try:
         response_info=json.loads(response)
-        json.dump(response_info,archivo,indent=6)
     except:
         print("El contenido de la semana no venia en un formato de JSON valido")
-    else:        
-        
+        return False
+    else:     
+        archivo=open(FilePath, "w")   
+        json.dump(response_info,archivo,indent=6)
         print("Se almaceno exitosamente el archivo:",FilePath)
+        return True
     finally:
         archivo.close()
 
 
 #GetHomework(Num)
 
-InputSemana = input("Ingrese semana:")
-InputFile = input("Ingrese path y nombre de archivo:")
-if(not(os.path.isdir(os.path.dirname(InputFile)))):
-    print("El path ingresado:",os.path.dirname(InputFile),"no se encuentra, porfavor ingrese un path valido")
+NumeroSemanas = int(input("Ingrese número de semanas a descargar:"))
+InputDirectorio = input("Ingrese el directorio donde se guardaran los archivos:")
+InputDirectorio = InputDirectorio.strip("\\")
+ResultadoGetHomework = False
+#c:\Tareas\
+#c:\Tareas+\+Semana1.json
+if(not(os.path.isdir(InputDirectorio))):
+    print("El path ingresado:",os.path.dirname(InputDirectorio),"no se encuentra, porfavor ingrese un path valido")
 else:
-    GetHomework(InputSemana,InputFile)
-
+    for i in range(1,NumeroSemanas+1):
+        ResultadoGetHomework=GetHomework("Semana{0}".format(i),InputDirectorio+"\\"+"Semana{0}".format(i))
+        if ResultadoGetHomework==False: 
+            print("Se logro descargar hasta la semana numero:",i-1)
+            break
+    else:
+        print("Todas las semanas se lograron almacenar exitosamente")
+#Semana+str(i)
 """
 Mensaje=input("Ingrese un mensaje para su commit:")
 TokenGithub=input("Ingrese su token para autenticarse a Github:")
