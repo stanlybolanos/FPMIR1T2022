@@ -5,6 +5,7 @@ from time import sleep
 # Definición de Variables Globales
 V=[] # Se utiliza para almacenar la lista de videos
 I=-1 # Se utiliza para registrar la cantidad de videos guardados en la lista menos uno, si contiene -1 implica que no hay videos en la lista
+DirectorioRelativo=""
 def IngreseNumero(UnTexto,Min,Max):
     # Esta funcion se utiliza para que el usuario ingrese un número comprendido en el rango Min y Max
     # devuelve dos valores, el primer valor es el número ingresado por el usuario, y el segúndo valor es booleano e indica si 
